@@ -1,0 +1,159 @@
+#figur, #toy, #cosplay, #purse{
+    visibility: hidden;
+}
+.catalogP{
+  position: relative;
+  top: -5px;
+}
+
+
+#figur + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border:1px solid #818181;
+    border-radius: 80px;
+    transition: background 0.4s;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  #figur + label:before{
+    display: block;
+    position: absolute;
+  
+    top: 2px;
+    left: 2px;
+    bottom: 5px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: background 0.4s;
+  }
+  
+  #figur:checked + label {
+    background-color: #921616;
+    border:1px solid #921616;
+    color: white;
+  }
+
+
+
+
+#toy + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border:1px solid #818181;
+    border-radius: 60px;
+    transition: background 0.4s;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  #toy + label:before{
+    display: block;
+    position: absolute;
+  
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: background 0.4s;
+  }
+  
+  #toy:checked + label {
+    background-color: #921616;
+    border:1px solid #921616;
+    color: white;
+  }
+
+
+#cosplay + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border:1px solid #818181;
+    border-radius: 60px;
+    transition: background 0.4s;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  #cosplay + label:before{
+    display: block;
+    position: absolute;
+  
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: background 0.4s;
+  }
+  
+  #cosplay:checked + label {
+    background-color: #921616;
+    border:1px solid #921616;
+    color: white;
+  }
+
+#purse + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+  
+    text-align: center;
+    padding-bottom: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border:1px solid #818181;
+    border-radius: 60px;
+    transition: background 0.4s;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  #purse + label:before{
+    display: block;
+    position: absolute;
+  
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: background 0.4s;
+  }
+  
+  #purse:checked + label {
+    background-color: #921616;
+    border:1px solid #921616;
+    color: white;
+  }

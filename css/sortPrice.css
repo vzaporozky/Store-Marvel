@@ -1,0 +1,26 @@
+.sortPrice{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    margin-right: 5%;
+    top: 400px;
+    margin-left: 40px;
+}
+#sort-asc, #sort-desc{
+    border: none;
+    border-radius: 30px;
+    background: rgb(230, 43, 43);
+    color: white;
+    padding: 10px;
+    font-size: 19px;
+    outline: none;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sort-asc:hover , #sort-desc:hover {
+    background: #a01818;
+    transition: background  1s;
+}

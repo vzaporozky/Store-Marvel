@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Modak&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/simplebar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/catalogFilter.css" />
+    <link rel="stylesheet" href="css/sortPrice.css" />
+    <link rel="stylesheet" href="css/pagination.css" />
+    <link rel="stylesheet" href="css/cartContent.css" />
+    <link rel="stylesheet" href="css/slider.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="headtext title">Anime</a>
+        <a href="#" class="headtext listheader">About</a>
+        <a href="#" class="headtext listheader">Service</a>
+        <a href="#" class="headtext listheader">Contact</a>
+        <div class="searchbar">
+            <!-- <form action="">
+                <input type="text" placeholder="Search.." name="search" class="searching">
+                <button type="submit" class="butt"></button>
+            </form> -->
+            <form class="searchForm">
+                <input class="place_for_search" type="text" id="text-to-find" value="" placeholder="Search" autofocus> 
+                <input class="button_for_turn_back" type="button" onclick="javascript: FindOnPage('text-to-find',false); return false;" value="X" title="Отменить поиск">
+                <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value="O" title="Начать поиск">
+          </form>
+        </div>
+        <h3 class="phone">Phone: <a href="tel:+380"class="noDecorphone">+380</a></h3>
+    </div>
+    <div class="breadcrumbHead">
+        <ul class="breadcrumb">
+            <li><a href="#"class="noDecoration">Home</a></li>
+            <li>Catalog</li>
+          </ul>
+    </div>
+    <div class="mainOne">
+        <div class="filterCatalog">
+            <h1 class="h1Caralog">Catalog</h1>
+            <div class="filterOne">
+                <input type="checkbox" id="figur"onchange="figur()"onchange="none()"checked>
+                <label for="figur"><p class="catalogP">Figurine</p></label><Br>
+
+                <input type="checkbox" id="toy"onchange="toy()"onchange="none()"checked>
+                <label for="toy"><p class="catalogP">Toys</p></label><Br>
+                    
+                <input type="checkbox" id="cosplay"onchange="cosplay()"onchange="none()"checked>
+                <label for="cosplay"><p class="catalogP">Cosplay</p></label><Br>
+
+                <input type="checkbox" id="purse"onchange="purse()"onchange="none()"checked>
+                <label for="purse"><p class="catalogP">Purse</p></label><Br>
+            </div>
+        </div>
+        
+
+
+            
+        <div class="shoppingCart cart" tabindex="0">
+            <div class="cart__text">
+                <img src="images/cart.png" alt="cart" class="cartJPG">
+                <span class="cart__quantity">0</span>
+            </div>
+            <div class="cart-content">
+                <ul class="cart-content__list" data-simplebar>
+                    <!-- <li class="cart-content__item">
+                        <article class="cart-content__product cart-product">
+                            <img src="img/macbook.jpg" alt="" class="cart-product__img">
+                            <div class="cart-product__text">
+                                <h3class="cart-product__title"></h3>
+                                <span class="cart-product__price"></span>
+                            </div>
+                            <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                        </article>
+                    </li>-->
+                </ul>
+                <div class="cart-content__bottom">
+                    <div class="cart-content__fullprice">
+                        <span>Итого:</span>
+                        <span class="fullprice">568 789 ₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+    </div>
+    <div class="mainTwo">
+        <div class="Price">
+            <h3>Price</h3>
+            <input type="range" min="0" max="10000" value="10000" id="myRange" class="slider">
+            <p class="valueSlider">Value: <span id="value"></span></p>
+        </div>
+        
+
+        <div id="Catalog">
+            <!-- <div id="figurmain"> -->
+                <div data-num=1  class="num figur1 product" id="figur1" data-price=7000>
+                    <div class="part">
+                        <div class="image image-switch__img">
+                            <img src="images/figur1.png" alt="" class="mainimg">
+                        </div>
+                        
+                        <div class="description product__title">
+                            <h2>Figurine Thor</h2>
+                            <p>Figurine Thor 19em</p>
+                            <h3 class="product-price__current">7000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>
+                    </div>            
+                </div>
+            
+                <div data-num=2  class="num figur1 product" id="figur2" data-price=1000>  
+                    <div class="part">         
+                        <div class="image image-switch__img">
+                            <img src="images/figur2.png" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Figurine Spider-man</h2>
+                            <p>Figurine Spider-man 16em</p>
+                            <h3 class="product-price__current">1000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div> 
+                    </div>           
+                </div>
+                <div data-num=3 class="num figur1 product" id="figur3"  data-price=2999>   
+                    <div class="part">         
+                        <div class="image image-switch__img">
+                            <img src="images/figur3.png" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Figurine Captain America</h2>
+                            <p>Figurine Captain America 16em</p>
+                            <h3 class="product-price__current">2999$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div> 
+                    </div>           
+                </div>
+            <!-- </div> -->
+    
+            <!-- <div id="toymain"> -->
+                <div data-num=4 class="num toy1 product" id="toy1" data-price=5000> 
+                    <div class="part">
+                        <div class="image image-switch__img">
+                            <img src="images/toy1.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Toy Spider-man</h2>
+                            <p>Toy Spider-man 20em</p>
+                            <h3 class="product-price__current">5000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div data-num=5 class="num toy1 product" id="toy2" data-price=1999> 
+                    <div class="part">          
+                        <div class="image image-switch__img">
+                            <img src="images/toy2.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Toy Iron Man</h2>
+                            <p>Toy Iron Man 20em</p>
+                            <h3 class="product-price__current">1999$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>  
+                    </div>          
+                </div>
+                <div data-num=6 class="num toy1 product" id="toy3" data-price=1000>   
+                    <div class="part">        
+                        <div class="image image-switch__img">
+                            <img src="images/toy3.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Toy Captain America</h2>
+                            <p>Toy Captain America 20em</p>
+                            <h3 class="product-price__current">1000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>  
+                    </div>          
+                </div>
+            <!-- </div> -->
+            
+            <!-- <div id="cosplaymain"> -->
+                <div data-num=7 class="num none cosplay1 product" id="cosplay1" data-price=10000>  
+                    <div class="part">          
+                        <div class="image image-switch__img">
+                            <img src="images/cosplay1.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Iron Man Gloves</h2>
+                            <p>Cosplay Iron Man Gloves 21 х 32 х 9</p>
+                            <h3 class="product-price__current">10000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>  
+                    </div>          
+                </div>
+                <div data-num=8 class="num none cosplay1 product" id="cosplay2" data-price=100>   
+                    <div class="part">         
+                        <div class="image image-switch__img">
+                            <img src="images/cosplay2.jpg " alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Battle Shield of the First Avenger</h2>
+                            <p>Cosplay Battle Shield of the First Avenger 20 em</p>
+                            <h3 class="product-price__current">100$</h3>
+                            <h3 class="not">Not Available</h3>
+                        </div> 
+                    </div>           
+                </div>
+                <div data-num=9 class="num none cosplay1 product" id="cosplay3" data-price=5999> 
+                    <div class="part">           
+                        <div class="image image-switch__img">
+                            <img src="images/cosplay3.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Batman's helmet</h2>
+                            <p>Cosplay Batman's helmet 30х25х6</p>
+                            <h3 class="product-price__current">5999$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>   
+                    </div>         
+                </div>
+            <!-- </div> -->
+            
+            <!-- <div id="pursemain"> -->
+                <div data-num=10 class="num none purse1 product" id="purse1"data-price=1000> 
+                    <div class="part">           
+                        <div class="image image-switch__img">
+                            <img src="images/purse1.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Purse Iron Man</h2>
+                            <p>Purse Iron Man 11,5 x 9,5</p>
+                            <h3 class="product-price__current">1000$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div> 
+                    </div>           
+                </div>
+                <div data-num=11 class="num none purse1 product" id="purse2" data-price=9999> 
+                    <div class="part">           
+                        <div class="image image-switch__img">
+                            <img src="images/purse2.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Purse Venom</h2>
+                            <p>Purse Venom 11,5 x 9,5</p>
+                            <h3 class="product-price__current">9999$</h3>
+                            <h3 class="not">Not Available</h3>
+                        </div>   
+                    </div>         
+                </div>
+                <div data-num=12 class="num none purse1 product" id="purse3" data-price=7888> 
+                    <div class="part">           
+                        <div class="image image-switch__img">
+                            <img src="images/purse3.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Purse Marvel team</h2>
+                            <p>Purse Marvel 11,5 x 9,5</p>
+                            <h3 class="product-price__current">7888$</h3>
+                            <h3 class="not">Not Available</h3>
+                        </div>   
+                    </div>         
+                </div>
+                <div data-num=13 class="num none purse1 product" id="purse4" data-price=200>   
+                    <div class="part">         
+                        <div class="image image-switch__img">
+                            <img src="images/purse4.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Purse Deadpool</h2>
+                            <p>Purse Deadpool 11,5 x 9,5</p>
+                            <h3 class="product-price__current">200$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>  
+                    </div>          
+                </div>
+                <div data-num=14 class="num none purse1 product" id="purse5" data-price=2999> 
+                    <div class="part">           
+                        <div class="image image-switch__img">
+                            <img src="images/purse5.jpg" alt="" class="mainimg">
+                        </div>
+                        <div class="description product__title">
+                            <h2>Purse Marvel</h2>
+                            <p>Purse Marvel 11,5 x 9,5</p>
+                            <h3 class="product-price__current">2999$</h3>
+                            <button class="product__btn btn" id="btn">Add to Cart</button>
+                        </div>  
+                    </div>          
+                </div>
+            <!-- </div> -->
+        </div>
+        
+        <div class="footer " id="footer">
+            <div class="copyright">Copyright 2020 | Anumanus | All Rights Reserved </div>
+            <div class="terms">Terms of Service | Privacy Policy</div>
+        </div>
+    </div>
+    <div class="footer2 " id="footer2">
+        <div class="copyright">Copyright 2020 | Anumanus | All Rights Reserved </div>
+        <div class="terms">Terms of Service | Privacy Policy</div>
+    </div>
+    <div class="paginator" onclick="pagination(event)"onchange="none()"></div>
+    
+    <div class="sortPrice">
+        <button id="sort-asc">Ascending</button>
+        <button id="sort-desc">Decreasing</button>
+    </div>
+
+
+    <script src="js/paginator.js"></script>
+    <script src="js/sortPrice.js"></script>
+    <script src="js/catalogFilter.js"></script>
+    <script src="js/simplebar.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/searchbar.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

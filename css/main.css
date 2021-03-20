@@ -1,0 +1,124 @@
+body{
+    font-family: 'Permanent Marker', cursive;
+}
+.mainOne{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100px;
+    margin-left: 50px;
+}
+
+.h1Caralog{
+    font-size: 50px;
+    position: relative;
+    top: -20px;
+}
+.mainTwo{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 200px;
+}
+.filterCatalog{
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+.filterOne{
+    display: flex;
+    margin-left: 20px;
+}
+.shoppingCart{
+    position: absolute;
+    right: 0;;
+}
+.Price{
+    position: absolute;
+    left: 0;
+    margin-right: 5%;
+    margin-left: 10px;
+}
+.money{
+    display: flex;
+}
+.mill{
+    margin-left: 80px;
+}
+
+#Catalog{
+    display: flex;
+    flex-wrap:wrap;
+    position: absolute;
+    right: 0;
+    margin-left: 25%;
+}
+.num{
+    margin-bottom: 25px;
+}
+.part{
+    display: flex;
+    margin-right: 5%;
+    width: 400px;
+}
+img{
+    height: 300px;
+    border-radius: 40px;
+    margin-right: 10px;
+}
+.not{
+    color: red;
+}
+div.none{
+    display: none;
+}
+
+
+.footer{
+    position: absolute;
+    top: 1000px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgb(73, 2, 2);
+    color: white;
+}
+.footer2{
+    display: none;
+    position: absolute;
+    top: 1900px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: rgb(73, 2, 2);
+    color: white;
+}
+.terms{
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
+}
+.copyright{
+    margin-left: 40px;
+}
+.terms, .copyright{
+    position: absolute;
+    top: 40px;
+}
+
+
+
+#figurmain, #toymain, #cosplaymain, #pursemain{
+    display: flex;
+}
+
+div.figur1, div.toy1, div.cosplay1, div.purse1 {
+    display: none;
+}
+
